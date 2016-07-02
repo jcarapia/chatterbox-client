@@ -12,8 +12,15 @@
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
+      <script>
+          $( "#sendbtn" ).click(function() {
+            event.preventDefault();
+          alert('hello');
+          });  
+      </script>
   </head>
   <body>
+  <div id="chats"></div>
     <div id="main">
       <h1>chatterbox</h1>
       <div id="textbox">
@@ -22,7 +29,7 @@
   <form>
   Messages:<br>
   <input type="text"  id="textEntry" ><br><br>
-  <input type="submit" id="sendbtn" value="Send!">
+  <button onclick="sendbtn" id="sendbtn">Send!</button>
 </form>
 
 

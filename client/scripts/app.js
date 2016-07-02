@@ -20,8 +20,40 @@ var app = {
         console.error('chatterbox: Failed to send message');
         }
         });
-        }
+        },
+  fetch: function(data){
+          $.ajax({
+            //url: 'https://api.parse.com/1/classes/chatterbox',
+            data: JSON.stringify(data),
+            dataType: 'text',
+            complete : function(){
+                alert(this.url);
+            },
+            success: function(){
+            }
+          })
+          }, 
+
+  addMessage: function(message){     
+      console.log(this);   
+      $(this.text).append('#chats');
+
+  //addMessage: function(message){}
+    //$( "#chats" ).click(function() {
+    //alert( "Handler for .click() called." );
+    //});  
+  },
+
+  clearMessages: function(message){
+    $('#chats').children().remove();
+
+  }
+
 }
+
+
+
+
 
 // // YOUR CODE HERE:
 // var app = {};
