@@ -35,19 +35,24 @@ var app = {
           }, 
 
   addMessage: function(message){     
-      console.log(this);   
-      $(this.text).append('#chats');
+      console.log(message);   
+      $('#chats').append('<p>'+message.text+'</p>');
 
-  //addMessage: function(message){}
-    //$( "#chats" ).click(function() {
-    //alert( "Handler for .click() called." );
-    //});  
   },
 
   clearMessages: function(message){
     $('#chats').children().remove();
+  },
 
-  }
+  addRoom: function(roomName){
+    $('#roomSelect').append('<div>roomName</div>');
+  },
+
+  addFriend: function(m){
+    $(message.name).click(function(){})
+    }
+
+
 
 }
 
